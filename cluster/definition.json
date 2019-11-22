@@ -1,0 +1,31 @@
+{
+    "name": "clusters",
+    "source": "https://github.com/microsoft/bedrock",
+    "template": "cluster/environments/azure-single-keyvault",
+    "version": "master",
+    "backend": {
+        "storage_account_name": "testops",
+        "access_key": "DEAD....BEEF==",
+        "container_name": "tfstate"
+    },
+    "variables": {
+        "acr_enabled": "true",
+        "agent_vm_count": "6",
+        "agent_vm_size": "Standard_D8s_v3",
+        "flux_recreate": "false",
+        "kubeconfig_recreate": "false",
+        "gc_enabled": "true",
+        "gitops_poll_interval": "60s",
+        "gitops_ssh_url": "git@ssh.dev.azure.com:v3/tpark/test/cluster-resource-manifests",
+        "gitops_url_branch": "master",
+        "gitops_ssh_key": "../keys/gitops_repo_key",
+        "keyvault_name": "test-keyvault",
+        "keyvault_resource_group": "test-global-rg",
+        "ssh_public_key": "ssh-rsa DEAD...BEEF== timfpark@gmail.com",
+        "network_plugin": "azure",
+        "network_policy": "azure",
+        "oms_agent_enabled": "true",
+        "enable_acr": "true",
+        "acr_name": "tpark"
+    }
+}

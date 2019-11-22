@@ -1,0 +1,16 @@
+{
+    "name": "prod-green",
+    "backend": {
+        "key": "prod-green"
+    },
+    "variables": {
+        "address_space": "10.8.0.0/16",
+        "cluster_name": "test-prod-green",
+        "dns_prefix": "test-prod-green",
+        "gitops_path": "azure-prod-green",
+        "resource_group_name": "test-prod-green-rg",
+        "subnet_prefixes": "10.8.0.0/16",
+        "vnet_name": "test-prod-green-vnet",
+        "subnet_name": "test-prod-green-subnet"
+    }
+}
